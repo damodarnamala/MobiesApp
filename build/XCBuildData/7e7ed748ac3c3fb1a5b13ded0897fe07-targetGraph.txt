@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Kingfisher in Kingfisher, no dependencies
+Kingfisher in Kingfisher, depends on:
+Kingfisher in Kingfisher (explicit)
+MoviesApp in MoviesApp, depends on:
+Kingfisher in Kingfisher (explicit)

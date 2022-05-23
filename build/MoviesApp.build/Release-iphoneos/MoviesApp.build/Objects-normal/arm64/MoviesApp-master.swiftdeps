@@ -1,0 +1,18 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "99844030ad3a4758f7399ffb7b111c5d72b2d9438296b4ba4b2f0a8039f93a2f"
+build_start_time: [1653220054, 923150062]
+build_end_time: [1653220055, 421998023]
+inputs:
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/Helers/LoadingView.swift": !dirty [1651848474, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/Helers/UrlSession+extention.swift": !dirty [1652099491, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieDetailView/MovieDetailView.swift": !dirty [1652101138, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieDetailView/MovieDetailViewModel.swift": !dirty [1652099975, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieDetailView/Usecase/MovieDetailUseCase.swift": !dirty [1652099595, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/Cells/MovieCell.swift": !dirty [1652089472, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/Cells/PlayingNowCell.swift": !dirty [1651854277, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/Models/MovieListModel.swift": !dirty [1652097810, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/MoviesListView.swift": !dirty [1652111097, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/MoviesListViewModel.swift": !dirty [1652111176, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/Usecase/MoviesListAPI.swift": !dirty [1651848536, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift": !dirty [1651846011, 0]
+  "/Users/dnamala/Downloads/MoviesApp/MoviesApp/MoviesApp.swift": !dirty [1651838223, 0]
