@@ -1,45 +1,15 @@
-
 default_platform(:ios)
-
 platform :ios do
 desc "Runniing all test"
   lane :run_test do
     scan(
     project:"MoviesApp.xcodeproj",
     scheme: "MoviesApp",
-    output_directory: "./DerivedData",
+    output_directory: "Reports/Scan",
     clean: true,
     code_coverage: true,
     device: "iPhone 13 Pro Max",
     )
-  end
-  
-  desc "Slathering.."
-  lane :run_coverage do
-    slather(
-      proj:"MoviesApp.xcodeproj",
-      scheme: "MoviesApp",
-      output_directory: "./DerivedData",
-      html:true,
-      show: true,
-      arch:"x86_64",
-      cobertura_xml:true,
-      ignore: ["Pods/*"],
-      decimals: true, 
-    )
-  end
-
-  desc "Coverage xcov.."
-  lane :run_xcov do
-    xcov(
-      project:"MoviesApp.xcodeproj",
-      scheme: "MoviesApp",
-      output_directory: "./DerivedData",
-      html_report:true,
-      markdown_report:true,
-      source_directory:"MoviesApp"
-    )
-    
   end
 end
 
