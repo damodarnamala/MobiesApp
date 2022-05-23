@@ -21,7 +21,23 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios run_test
 ```
 
-Runniing all test
+Runniing all tests
+
+### ios run_xcov
+
+```sh
+[bundle exec] fastlane ios run_xcov
+```
+
+Coverage xcov..
+
+### ios run_coverage
+
+```sh
+[bundle exec] fastlane ios run_coverage
+```
+
+Coverage xcov..
 
 ----
 
