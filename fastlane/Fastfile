@@ -12,32 +12,47 @@ platform :ios do
 		)
 	end
 
-	desc "Coverage xcov.."
-  lane :run_xcov do
-    xcov(
-      project:"MoviesApp.xcodeproj",
-      scheme: "MoviesApp",
-      output_directory: "Reports/Xcov",
-      html_report:true,
-      markdown_report:true,
-      source_directory:"MoviesApp"
-    )
-  end
+	desc "Running xcov.."
+	lane :run_xcov do
+		xcov(
+			project:"MoviesApp.xcodeproj",
+			scheme: "MoviesApp",
+			output_directory: "Reports/Xcov",
+			html_report:true,
+			markdown_report:true,
+			source_directory:"MoviesApp"
+		)
+	end
+		desc "Coverage xcov.."
+	lane :run_coverage do
 
-  desc "Coverage xcov.."
-  lane :run_coverage do
-    slather(
-      proj: "MoviesApp.xcodeproj",
-      scheme: "MoviesApp",
-      cobertura_xml: true,
-      arch: "x86_64",
-      output_directory: "Reports/Slather",
-      html: true, 
-      input_format:"profdata",
-      llvm_cov: true,
-      binary_basename:"MoviesApp"
-        )
-  end
+		# slather coverage --scheme MoviesApp --input-format profdata --output-directory ./Reports/Slather --show --html ./MoviesApp.xcodeproj   	slather(
+			proj: "MoviesApp.xcodeproj",
+			scheme: "MoviesApp",
+			cobertura_xml: true,
+			arch: "x86_64",
+			output_directory: "/Reports/Slather",
+			html: true,
+			coverage:true
+		)
+	end
+
+	desc "Running swiftLint.."
+	lane :run_lint do
+		swiftlint(
+			mode: :lint,
+			# executable: "Pods/SwiftLint/swiftlint",
+			reporter: "html",
+			output_file: "Reports/Swiftlint/Result.html",
+			config_file: '.swiftlint.yml',
+			ignore_exit_status: true
+		)
+	end
+
+	desc "Running lizard.."
+	lane :check_lizard do
+	# lizard -Eduplicate
+	# lizard -EWordCount
+	lizard(source_folder: 'MoviesApp', export_type: 'xml', report_file: 'Reports/Lizard/Reports.xml')
+	end
 end
-
-

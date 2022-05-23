@@ -29,7 +29,7 @@ Runniing all tests
 [bundle exec] fastlane ios run_xcov
 ```
 
-Coverage xcov..
+Running xcov..
 
 ### ios run_coverage
 
@@ -38,6 +38,22 @@ Coverage xcov..
 ```
 
 Coverage xcov..
+
+### ios run_lint
+
+```sh
+[bundle exec] fastlane ios run_lint
+```
+
+Running swiftLint..
+
+### ios check_lizard
+
+```sh
+[bundle exec] fastlane ios check_lizard
+```
+
+Running lizard..
 
 ----
 

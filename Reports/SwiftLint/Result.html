@@ -1,0 +1,733 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 0.9rem;
+			}
+			
+			table {
+				border: 1px solid gray;
+				border-collapse: collapse;
+				-moz-box-shadow: 3px 3px 4px #AAA;
+				-webkit-box-shadow: 3px 3px 4px #AAA;
+				box-shadow: 3px 3px 4px #AAA;
+				vertical-align: top;
+				height: 64px;
+			}
+			
+			td, th {
+				border: 1px solid #D3D3D3;
+				padding: 5px 10px 5px 10px;
+			}
+			
+			th {
+				border-bottom: 1px solid gray;
+				background-color: rgba(41,52,92,0.313);
+			}
+			
+			.error, .warning {
+				text-align: center;
+			}
+			
+			.error {
+				background-color: #FF9D92;
+				color: #7F0800;
+			}
+			
+			.warning {
+				background-color: #FFF59E;
+				color: #7F7000;
+			}
+		</style>
+		
+		<title>SwiftLint Report</title>
+	</head>
+	<body>
+		<h1>SwiftLint Report</h1>
+		
+		<hr />
+		
+		<h2>Violations</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 60pt;">
+						<b>Serial No.</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>File</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Location</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Severity</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>Message</b>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: right;">1</td>
+					<td>MoviesApp/MovieDetailView/Usecase/MovieDetailUseCase.swift</td>
+					<td style="text-align: center;">60:45</td>
+					<td class="warning">Warning</td>
+					<td>Force casts should be avoided.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">2</td>
+					<td>MoviesApp/MovieDetailView/Usecase/MovieDetailUseCase.swift</td>
+					<td style="text-align: center;">56:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">3</td>
+					<td>MoviesApp/MovieDetailView/Usecase/MovieDetailUseCase.swift</td>
+					<td style="text-align: center;">12:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 3.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">4</td>
+					<td>MoviesApp/MovieDetailView/Usecase/MovieDetailUseCase.swift</td>
+					<td style="text-align: center;">37:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">5</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">45:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 114 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">6</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">14:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">7</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">25:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">8</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">31:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">9</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">37:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">10</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">40:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">11</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">44:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">12</td>
+					<td>MoviesApp/Helers/LoadingView.swift</td>
+					<td style="text-align: center;">35:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">13</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">14:14</td>
+					<td class="warning">Warning</td>
+					<td>Function body should span 40 lines or less excluding comments and whitespace: currently spans 55 lines</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">14</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">34:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">15</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">47:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">16</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">60:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">17</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">68:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">18</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">79:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">19</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">87:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">20</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">89:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">21</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">99:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">22</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">70:81</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;movies&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">23</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">88:83</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;values&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">24</td>
+					<td>MoviesAppTests/MoviesListViewModelSpec.swift</td>
+					<td style="text-align: center;">90:36</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;movies&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">25</td>
+					<td>MoviesApp/MovieListView/Cells/MovieCell.swift</td>
+					<td style="text-align: center;">45:0</td>
+					<td class="warning">Warning</td>
+					<td>Files should have a single trailing newline.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">26</td>
+					<td>MoviesApp/MovieListView/Cells/MovieCell.swift</td>
+					<td style="text-align: center;">23:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">27</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">12:5</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;vote_average&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">28</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">13:5</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;release_date&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">29</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">14:5</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;poster_path&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">30</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">27:5</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;total_pages&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">31</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">33:5</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;poster_path&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">32</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">36:5</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;release_date&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">33</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">43:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 138 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">34</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">59:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 133 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">35</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">48:22</td>
+					<td class="warning">Warning</td>
+					<td>Opening braces should be preceded by a single space and on the same line as the declaration.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">36</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">9:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">37</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">24:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">38</td>
+					<td>MoviesApp/MovieListView/Models/MovieListModel.swift</td>
+					<td style="text-align: center;">53:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">39</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">20:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">40</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">24:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">41</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">42:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">42</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">56:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">43</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">71:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">44</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">88:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">45</td>
+					<td>MoviesApp/MovieListView/MoviesListView.swift</td>
+					<td style="text-align: center;">93:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">46</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">18:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">47</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">22:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">48</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">26:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">49</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">38:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">50</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">45:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">51</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">32:21</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;completion&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">52</td>
+					<td>MoviesApp/MovieListView/MoviesListViewModel.swift</td>
+					<td style="text-align: center;">44:21</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;completion&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">53</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">15:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">54</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">18:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">55</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">22:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">56</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">26:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">57</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">30:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">58</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">34:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">59</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailViewModel.swift</td>
+					<td style="text-align: center;">40:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">60</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListAPI.swift</td>
+					<td style="text-align: center;">11:1</td>
+					<td class="error">Error</td>
+					<td>Variable name should only contain alphanumeric characters: &apos;photo_URL&apos;</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">61</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListAPI.swift</td>
+					<td style="text-align: center;">39:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 111 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">62</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListAPI.swift</td>
+					<td style="text-align: center;">19:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">63</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListAPI.swift</td>
+					<td style="text-align: center;">25:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">64</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailView.swift</td>
+					<td style="text-align: center;">25:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">65</td>
+					<td>MoviesApp/MovieDetailView/MovieDetailView.swift</td>
+					<td style="text-align: center;">35:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">66</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">18:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 132 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">67</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">40:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 132 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">68</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">59:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 137 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">69</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">22:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">70</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">29:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">71</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">34:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">72</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">38:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">73</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">43:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">74</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">45:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">75</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">53:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">76</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">57:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">77</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">62:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">78</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">64:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">79</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">46:36</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;details&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">80</td>
+					<td>MoviesAppTests/MoviesDetailViewModelSpec.swift</td>
+					<td style="text-align: center;">65:36</td>
+					<td class="warning">Warning</td>
+					<td>Unused parameter &quot;details&quot; in a closure should be replaced with _.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">81</td>
+					<td>MoviesApp/Helers/UrlSession+extention.swift</td>
+					<td style="text-align: center;">20:76</td>
+					<td class="warning">Warning</td>
+					<td>Opening braces should be preceded by a single space and on the same line as the declaration.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">82</td>
+					<td>MoviesApp/Helers/UrlSession+extention.swift</td>
+					<td style="text-align: center;">19:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">83</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift</td>
+					<td style="text-align: center;">79:34</td>
+					<td class="warning">Warning</td>
+					<td>Return arrow and return type should be separated by a single space or on a separate line.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">84</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift</td>
+					<td style="text-align: center;">32:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">85</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift</td>
+					<td style="text-align: center;">37:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">86</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift</td>
+					<td style="text-align: center;">54:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">87</td>
+					<td>MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift</td>
+					<td style="text-align: center;">78:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">88</td>
+					<td>MoviesAppUITests/MoviesAppUITests.swift</td>
+					<td style="text-align: center;">18:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 182 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">89</td>
+					<td>MoviesAppUITests/MoviesAppUITests.swift</td>
+					<td style="text-align: center;">22:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 111 characters</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br/>
+		
+		<h2>Summary</h2>
+		
+		<table>
+			<tbody>
+				<tr>
+					<td>Total files with violations</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td>Total warnings</td>
+					<td>82</td>
+				</tr>
+				<tr>
+					<td>Total errors</td>
+					<td>7</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr />
+		
+		<p>
+			Created with
+			<a href="https://github.com/realm/SwiftLint"><b>SwiftLint</b></a>
+			0.47.1 on 23/05/22
+		</p>
+	</body>
+</html>

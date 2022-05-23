@@ -255,8 +255,8 @@ DEPENDENCIES
   fastlane
   fastlane-plugin-lizard
   lizard
-  slather (= 2.7.2)
+  slather
   xcov
 
 BUNDLED WITH
-   2.3.13
+   2.3.14

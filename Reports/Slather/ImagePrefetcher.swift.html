@@ -1,0 +1,2232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>ImagePrefetcher.swift - Slather</title>
+<link href="slather.css" media="all" rel="stylesheet">
+</head>
+<body>
+<header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
+<h2 class="cov_title">
+<span>Coverage for "ImagePrefetcher.swift" : </span><span>Lines: </span><span class="cov_low">0.00%</span><span> Branches: </span><span class="cov_low">0.00%</span>
+</h2>
+<h4 class="cov_subtitle">(0 of 216 relevant lines covered)</h4>
+<h4 class="cov_filepath">../../Library/Developer/Xcode/DerivedData/MoviesApp-giwrjipdrxodogcnlilxhhdbjkad/SourcePackages/checkouts/Kingfisher/Sources/Networking/ImagePrefetcher.swift</h4>
+<table class="source_code">
+<tr class="never">
+<td class="num">1</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">2</td>
+<td class="src"><pre><code class="objc">//  ImagePrefetcher.swift</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">3</td>
+<td class="src"><pre><code class="objc">//  Kingfisher</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">4</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">5</td>
+<td class="src"><pre><code class="objc">//  Created by Claire Knight &lt;claire.knight@moggytech.co.uk&gt; on 24/02/2016</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">6</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">7</td>
+<td class="src"><pre><code class="objc">//  Copyright (c) 2019 Wei Wang &lt;onevcat@gmail.com&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">8</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">9</td>
+<td class="src"><pre><code class="objc">//  Permission is hereby granted, free of charge, to any person obtaining a copy</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">10</td>
+<td class="src"><pre><code class="objc">//  of this software and associated documentation files (the "Software"), to deal</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">11</td>
+<td class="src"><pre><code class="objc">//  in the Software without restriction, including without limitation the rights</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">12</td>
+<td class="src"><pre><code class="objc">//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">13</td>
+<td class="src"><pre><code class="objc">//  copies of the Software, and to permit persons to whom the Software is</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">14</td>
+<td class="src"><pre><code class="objc">//  furnished to do so, subject to the following conditions:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">15</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">16</td>
+<td class="src"><pre><code class="objc">//  The above copyright notice and this permission notice shall be included in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">//  all copies or substantial portions of the Software.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">19</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">20</td>
+<td class="src"><pre><code class="objc">//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">21</td>
+<td class="src"><pre><code class="objc">//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">22</td>
+<td class="src"><pre><code class="objc">//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">23</td>
+<td class="src"><pre><code class="objc">//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">24</td>
+<td class="src"><pre><code class="objc">//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">25</td>
+<td class="src"><pre><code class="objc">//  THE SOFTWARE.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc">#if os(macOS)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">29</td>
+<td class="src"><pre><code class="objc">import AppKit</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">30</td>
+<td class="src"><pre><code class="objc">#else</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">31</td>
+<td class="src"><pre><code class="objc">import UIKit</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">32</td>
+<td class="src"><pre><code class="objc">#endif</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">33</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">/// Progress update block of prefetcher when initialized with a list of resources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">35</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">36</td>
+<td class="src"><pre><code class="objc">/// - `skippedResources`: An array of resources that are already cached before the prefetching starting.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">37</td>
+<td class="src"><pre><code class="objc">/// - `failedResources`: An array of resources that fail to be downloaded. It could because of being cancelled while</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">38</td>
+<td class="src"><pre><code class="objc">///                      downloading, encountered an error when downloading or the download not being started at all.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">39</td>
+<td class="src"><pre><code class="objc">/// - `completedResources`: An array of resources that are downloaded and cached successfully.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">40</td>
+<td class="src"><pre><code class="objc">public typealias PrefetcherProgressBlock =</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">41</td>
+<td class="src"><pre><code class="objc">    ((_ skippedResources: [Resource], _ failedResources: [Resource], _ completedResources: [Resource]) -&gt; Void)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">42</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">43</td>
+<td class="src"><pre><code class="objc">/// Progress update block of prefetcher when initialized with a list of resources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">44</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">45</td>
+<td class="src"><pre><code class="objc">/// - `skippedSources`: An array of sources that are already cached before the prefetching starting.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">46</td>
+<td class="src"><pre><code class="objc">/// - `failedSources`: An array of sources that fail to be fetched.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">47</td>
+<td class="src"><pre><code class="objc">/// - `completedResources`: An array of sources that are fetched and cached successfully.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">48</td>
+<td class="src"><pre><code class="objc">public typealias PrefetcherSourceProgressBlock =</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">49</td>
+<td class="src"><pre><code class="objc">    ((_ skippedSources: [Source], _ failedSources: [Source], _ completedSources: [Source]) -&gt; Void)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">50</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">51</td>
+<td class="src"><pre><code class="objc">/// Completion block of prefetcher when initialized with a list of sources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">52</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">53</td>
+<td class="src"><pre><code class="objc">/// - `skippedResources`: An array of resources that are already cached before the prefetching starting.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">54</td>
+<td class="src"><pre><code class="objc">/// - `failedResources`: An array of resources that fail to be downloaded. It could because of being cancelled while</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">55</td>
+<td class="src"><pre><code class="objc">///                      downloading, encountered an error when downloading or the download not being started at all.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">/// - `completedResources`: An array of resources that are downloaded and cached successfully.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">57</td>
+<td class="src"><pre><code class="objc">public typealias PrefetcherCompletionHandler =</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">58</td>
+<td class="src"><pre><code class="objc">    ((_ skippedResources: [Resource], _ failedResources: [Resource], _ completedResources: [Resource]) -&gt; Void)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">60</td>
+<td class="src"><pre><code class="objc">/// Completion block of prefetcher when initialized with a list of sources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">61</td>
+<td class="src"><pre><code class="objc">///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc">/// - `skippedSources`: An array of sources that are already cached before the prefetching starting.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc">/// - `failedSources`: An array of sources that fail to be fetched.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">/// - `completedSources`: An array of sources that are fetched and cached successfully.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc">public typealias PrefetcherSourceCompletionHandler =</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">    ((_ skippedSources: [Source], _ failedSources: [Source], _ completedSources: [Source]) -&gt; Void)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc">/// `ImagePrefetcher` represents a downloading manager for requesting many images via URLs, then caching them.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc">/// This is useful when you know a list of image resources and want to download them before showing. It also works with</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc">/// some Cocoa prefetching mechanism like table view or collection view `prefetchDataSource`, to start image downloading</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">/// and caching before they display on screen.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">72</td>
+<td class="src"><pre><code class="objc">public class ImagePrefetcher: CustomStringConvertible {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">73</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">74</td>
+<td class="src"><pre><code class="objc">    public var description: String {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">75</td>
+<td class="src"><pre><code class="objc">        return "\(Unmanaged.passUnretained(self).toOpaque())"</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">76</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">77</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">78</td>
+<td class="src"><pre><code class="objc">    /// The maximum concurrent downloads to use when prefetching images. Default is 5.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">79</td>
+<td class="src"><pre><code class="objc">    public var maxConcurrentDownloads = 5</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">80</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">81</td>
+<td class="src"><pre><code class="objc">    private let prefetchSources: [Source]</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">82</td>
+<td class="src"><pre><code class="objc">    private let optionsInfo: KingfisherParsedOptionsInfo</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">83</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">84</td>
+<td class="src"><pre><code class="objc">    private var progressBlock: PrefetcherProgressBlock?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">85</td>
+<td class="src"><pre><code class="objc">    private var completionHandler: PrefetcherCompletionHandler?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">86</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">87</td>
+<td class="src"><pre><code class="objc">    private var progressSourceBlock: PrefetcherSourceProgressBlock?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">88</td>
+<td class="src"><pre><code class="objc">    private var completionSourceHandler: PrefetcherSourceCompletionHandler?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">89</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">90</td>
+<td class="src"><pre><code class="objc">    private var tasks = [String: DownloadTask.WrappedTask]()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">91</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">92</td>
+<td class="src"><pre><code class="objc">    private var pendingSources: ArraySlice&lt;Source&gt;</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">93</td>
+<td class="src"><pre><code class="objc">    private var skippedSources = [Source]()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">94</td>
+<td class="src"><pre><code class="objc">    private var completedSources = [Source]()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">95</td>
+<td class="src"><pre><code class="objc">    private var failedSources = [Source]()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">96</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">97</td>
+<td class="src"><pre><code class="objc">    private var stopped = false</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">98</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">99</td>
+<td class="src"><pre><code class="objc">    // A manager used for prefetching. We will use the helper methods in manager.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">100</td>
+<td class="src"><pre><code class="objc">    private let manager: KingfisherManager</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">101</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">102</td>
+<td class="src"><pre><code class="objc">    private let pretchQueue = DispatchQueue(label: "com.onevcat.Kingfisher.ImagePrefetcher.pretchQueue")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">103</td>
+<td class="src"><pre><code class="objc">    private static let requestingQueue = DispatchQueue(label: "com.onevcat.Kingfisher.ImagePrefetcher.requestingQueue")</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">104</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">105</td>
+<td class="src"><pre><code class="objc">    private var finished: Bool {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">106</td>
+<td class="src"><pre><code class="objc">        let totalFinished: Int = failedSources.count + skippedSources.count + completedSources.count</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">107</td>
+<td class="src"><pre><code class="objc">        return totalFinished == prefetchSources.count &amp;&amp; tasks.isEmpty</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">108</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">109</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">110</td>
+<td class="src"><pre><code class="objc">    /// Creates an image prefetcher with an array of URLs.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">111</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">112</td>
+<td class="src"><pre><code class="objc">    /// The prefetcher should be initiated with a list of prefetching targets. The URLs list is immutable.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">113</td>
+<td class="src"><pre><code class="objc">    /// After you get a valid `ImagePrefetcher` object, you call `start()` on it to begin the prefetching process.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">114</td>
+<td class="src"><pre><code class="objc">    /// The images which are already cached will be skipped without downloading again.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">115</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">116</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">117</td>
+<td class="src"><pre><code class="objc">    ///   - urls: The URLs which should be prefetched.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">118</td>
+<td class="src"><pre><code class="objc">    ///   - options: Options could control some behaviors. See `KingfisherOptionsInfo` for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">119</td>
+<td class="src"><pre><code class="objc">    ///   - progressBlock: Called every time an resource is downloaded, skipped or cancelled.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">120</td>
+<td class="src"><pre><code class="objc">    ///   - completionHandler: Called when the whole prefetching process finished.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">121</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">122</td>
+<td class="src"><pre><code class="objc">    /// - Note:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">123</td>
+<td class="src"><pre><code class="objc">    /// By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">124</td>
+<td class="src"><pre><code class="objc">    /// the downloader and cache target respectively. You can specify another downloader or cache by using</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">125</td>
+<td class="src"><pre><code class="objc">    /// a customized `KingfisherOptionsInfo`. Both the progress and completion block will be invoked in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">126</td>
+<td class="src"><pre><code class="objc">    /// main thread. The `.callbackQueue` value in `optionsInfo` will be ignored in this method.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">127</td>
+<td class="src"><pre><code class="objc">    public convenience init(</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">128</td>
+<td class="src"><pre><code class="objc">        urls: [URL],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">129</td>
+<td class="src"><pre><code class="objc">        options: KingfisherOptionsInfo? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">130</td>
+<td class="src"><pre><code class="objc">        progressBlock: PrefetcherProgressBlock? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">131</td>
+<td class="src"><pre><code class="objc">        completionHandler: PrefetcherCompletionHandler? = nil)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">132</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">133</td>
+<td class="src"><pre><code class="objc">        let resources: [Resource] = urls.map { $0 }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">134</td>
+<td class="src"><pre><code class="objc">        self.init(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">135</td>
+<td class="src"><pre><code class="objc">            resources: resources,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">136</td>
+<td class="src"><pre><code class="objc">            options: options,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">137</td>
+<td class="src"><pre><code class="objc">            progressBlock: progressBlock,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">138</td>
+<td class="src"><pre><code class="objc">            completionHandler: completionHandler)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">139</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">140</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">141</td>
+<td class="src"><pre><code class="objc">    /// Creates an image prefetcher with an array of URLs.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">142</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">143</td>
+<td class="src"><pre><code class="objc">    /// The prefetcher should be initiated with a list of prefetching targets. The URLs list is immutable.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">144</td>
+<td class="src"><pre><code class="objc">    /// After you get a valid `ImagePrefetcher` object, you call `start()` on it to begin the prefetching process.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">145</td>
+<td class="src"><pre><code class="objc">    /// The images which are already cached will be skipped without downloading again.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">146</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">147</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">148</td>
+<td class="src"><pre><code class="objc">    ///   - urls: The URLs which should be prefetched.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">149</td>
+<td class="src"><pre><code class="objc">    ///   - options: Options could control some behaviors. See `KingfisherOptionsInfo` for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">150</td>
+<td class="src"><pre><code class="objc">    ///   - completionHandler: Called when the whole prefetching process finished.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">151</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">152</td>
+<td class="src"><pre><code class="objc">    /// - Note:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">153</td>
+<td class="src"><pre><code class="objc">    /// By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">154</td>
+<td class="src"><pre><code class="objc">    /// the downloader and cache target respectively. You can specify another downloader or cache by using</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">155</td>
+<td class="src"><pre><code class="objc">    /// a customized `KingfisherOptionsInfo`. Both the progress and completion block will be invoked in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">156</td>
+<td class="src"><pre><code class="objc">    /// main thread. The `.callbackQueue` value in `optionsInfo` will be ignored in this method.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">157</td>
+<td class="src"><pre><code class="objc">    public convenience init(</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">158</td>
+<td class="src"><pre><code class="objc">        urls: [URL],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">159</td>
+<td class="src"><pre><code class="objc">        options: KingfisherOptionsInfo? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">160</td>
+<td class="src"><pre><code class="objc">        completionHandler: PrefetcherCompletionHandler? = nil)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">161</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">162</td>
+<td class="src"><pre><code class="objc">        let resources: [Resource] = urls.map { $0 }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">163</td>
+<td class="src"><pre><code class="objc">        self.init(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">164</td>
+<td class="src"><pre><code class="objc">            resources: resources,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">165</td>
+<td class="src"><pre><code class="objc">            options: options,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">166</td>
+<td class="src"><pre><code class="objc">            progressBlock: nil,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">167</td>
+<td class="src"><pre><code class="objc">            completionHandler: completionHandler)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">168</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">169</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">170</td>
+<td class="src"><pre><code class="objc">    /// Creates an image prefetcher with an array of resources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">171</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">172</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">173</td>
+<td class="src"><pre><code class="objc">    ///   - resources: The resources which should be prefetched. See `Resource` type for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">174</td>
+<td class="src"><pre><code class="objc">    ///   - options: Options could control some behaviors. See `KingfisherOptionsInfo` for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">175</td>
+<td class="src"><pre><code class="objc">    ///   - progressBlock: Called every time an resource is downloaded, skipped or cancelled.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">176</td>
+<td class="src"><pre><code class="objc">    ///   - completionHandler: Called when the whole prefetching process finished.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">177</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">178</td>
+<td class="src"><pre><code class="objc">    /// - Note:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">179</td>
+<td class="src"><pre><code class="objc">    /// By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">180</td>
+<td class="src"><pre><code class="objc">    /// the downloader and cache target respectively. You can specify another downloader or cache by using</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">181</td>
+<td class="src"><pre><code class="objc">    /// a customized `KingfisherOptionsInfo`. Both the progress and completion block will be invoked in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">182</td>
+<td class="src"><pre><code class="objc">    /// main thread. The `.callbackQueue` value in `optionsInfo` will be ignored in this method.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">183</td>
+<td class="src"><pre><code class="objc">    public convenience init(</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">184</td>
+<td class="src"><pre><code class="objc">        resources: [Resource],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">185</td>
+<td class="src"><pre><code class="objc">        options: KingfisherOptionsInfo? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">186</td>
+<td class="src"><pre><code class="objc">        progressBlock: PrefetcherProgressBlock? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">187</td>
+<td class="src"><pre><code class="objc">        completionHandler: PrefetcherCompletionHandler? = nil)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">188</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">189</td>
+<td class="src"><pre><code class="objc">        self.init(sources: resources.map { $0.convertToSource() }, options: options)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">190</td>
+<td class="src"><pre><code class="objc">        self.progressBlock = progressBlock</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">191</td>
+<td class="src"><pre><code class="objc">        self.completionHandler = completionHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">192</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">193</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">194</td>
+<td class="src"><pre><code class="objc">    /// Creates an image prefetcher with an array of resources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">195</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">196</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">197</td>
+<td class="src"><pre><code class="objc">    ///   - resources: The resources which should be prefetched. See `Resource` type for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">198</td>
+<td class="src"><pre><code class="objc">    ///   - options: Options could control some behaviors. See `KingfisherOptionsInfo` for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">199</td>
+<td class="src"><pre><code class="objc">    ///   - completionHandler: Called when the whole prefetching process finished.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">200</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">201</td>
+<td class="src"><pre><code class="objc">    /// - Note:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">202</td>
+<td class="src"><pre><code class="objc">    /// By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">203</td>
+<td class="src"><pre><code class="objc">    /// the downloader and cache target respectively. You can specify another downloader or cache by using</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">204</td>
+<td class="src"><pre><code class="objc">    /// a customized `KingfisherOptionsInfo`. Both the progress and completion block will be invoked in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">205</td>
+<td class="src"><pre><code class="objc">    /// main thread. The `.callbackQueue` value in `optionsInfo` will be ignored in this method.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">206</td>
+<td class="src"><pre><code class="objc">    public convenience init(</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">207</td>
+<td class="src"><pre><code class="objc">        resources: [Resource],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">208</td>
+<td class="src"><pre><code class="objc">        options: KingfisherOptionsInfo? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">209</td>
+<td class="src"><pre><code class="objc">        completionHandler: PrefetcherCompletionHandler? = nil)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">210</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">211</td>
+<td class="src"><pre><code class="objc">        self.init(sources: resources.map { $0.convertToSource() }, options: options)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">212</td>
+<td class="src"><pre><code class="objc">        self.completionHandler = completionHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">213</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">214</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">215</td>
+<td class="src"><pre><code class="objc">    /// Creates an image prefetcher with an array of sources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">216</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">217</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">218</td>
+<td class="src"><pre><code class="objc">    ///   - sources: The sources which should be prefetched. See `Source` type for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">219</td>
+<td class="src"><pre><code class="objc">    ///   - options: Options could control some behaviors. See `KingfisherOptionsInfo` for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">220</td>
+<td class="src"><pre><code class="objc">    ///   - progressBlock: Called every time an source fetching successes, fails, is skipped.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">221</td>
+<td class="src"><pre><code class="objc">    ///   - completionHandler: Called when the whole prefetching process finished.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">222</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">223</td>
+<td class="src"><pre><code class="objc">    /// - Note:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">224</td>
+<td class="src"><pre><code class="objc">    /// By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">225</td>
+<td class="src"><pre><code class="objc">    /// the downloader and cache target respectively. You can specify another downloader or cache by using</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">226</td>
+<td class="src"><pre><code class="objc">    /// a customized `KingfisherOptionsInfo`. Both the progress and completion block will be invoked in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">227</td>
+<td class="src"><pre><code class="objc">    /// main thread. The `.callbackQueue` value in `optionsInfo` will be ignored in this method.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">228</td>
+<td class="src"><pre><code class="objc">    public convenience init(sources: [Source],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">229</td>
+<td class="src"><pre><code class="objc">        options: KingfisherOptionsInfo? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">230</td>
+<td class="src"><pre><code class="objc">        progressBlock: PrefetcherSourceProgressBlock? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">231</td>
+<td class="src"><pre><code class="objc">        completionHandler: PrefetcherSourceCompletionHandler? = nil)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">232</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">233</td>
+<td class="src"><pre><code class="objc">        self.init(sources: sources, options: options)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">234</td>
+<td class="src"><pre><code class="objc">        self.progressSourceBlock = progressBlock</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">235</td>
+<td class="src"><pre><code class="objc">        self.completionSourceHandler = completionHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">236</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">237</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">238</td>
+<td class="src"><pre><code class="objc">    /// Creates an image prefetcher with an array of sources.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">239</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">240</td>
+<td class="src"><pre><code class="objc">    /// - Parameters:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">241</td>
+<td class="src"><pre><code class="objc">    ///   - sources: The sources which should be prefetched. See `Source` type for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">242</td>
+<td class="src"><pre><code class="objc">    ///   - options: Options could control some behaviors. See `KingfisherOptionsInfo` for more.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">243</td>
+<td class="src"><pre><code class="objc">    ///   - completionHandler: Called when the whole prefetching process finished.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">244</td>
+<td class="src"><pre><code class="objc">    ///</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">245</td>
+<td class="src"><pre><code class="objc">    /// - Note:</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">246</td>
+<td class="src"><pre><code class="objc">    /// By default, the `ImageDownloader.defaultDownloader` and `ImageCache.defaultCache` will be used as</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">247</td>
+<td class="src"><pre><code class="objc">    /// the downloader and cache target respectively. You can specify another downloader or cache by using</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">248</td>
+<td class="src"><pre><code class="objc">    /// a customized `KingfisherOptionsInfo`. Both the progress and completion block will be invoked in</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">249</td>
+<td class="src"><pre><code class="objc">    /// main thread. The `.callbackQueue` value in `optionsInfo` will be ignored in this method.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">250</td>
+<td class="src"><pre><code class="objc">    public convenience init(sources: [Source],</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">251</td>
+<td class="src"><pre><code class="objc">        options: KingfisherOptionsInfo? = nil,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">252</td>
+<td class="src"><pre><code class="objc">        completionHandler: PrefetcherSourceCompletionHandler? = nil)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">253</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">254</td>
+<td class="src"><pre><code class="objc">        self.init(sources: sources, options: options)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">255</td>
+<td class="src"><pre><code class="objc">        self.completionSourceHandler = completionHandler</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">256</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">257</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">258</td>
+<td class="src"><pre><code class="objc">    init(sources: [Source], options: KingfisherOptionsInfo?) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">259</td>
+<td class="src"><pre><code class="objc">        var options = KingfisherParsedOptionsInfo(options)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">260</td>
+<td class="src"><pre><code class="objc">        prefetchSources = sources</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">261</td>
+<td class="src"><pre><code class="objc">        pendingSources = ArraySlice(sources)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">262</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">263</td>
+<td class="src"><pre><code class="objc">        // We want all callbacks from our prefetch queue, so we should ignore the callback queue in options.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">264</td>
+<td class="src"><pre><code class="objc">        // Add our own callback dispatch queue to make sure all internal callbacks are</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">265</td>
+<td class="src"><pre><code class="objc">        // coming back in our expected queue.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">266</td>
+<td class="src"><pre><code class="objc">        options.callbackQueue = .dispatch(pretchQueue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">267</td>
+<td class="src"><pre><code class="objc">        optionsInfo = options</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">268</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">269</td>
+<td class="src"><pre><code class="objc">        let cache = optionsInfo.targetCache ?? .default</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">270</td>
+<td class="src"><pre><code class="objc">        let downloader = optionsInfo.downloader ?? .default</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">271</td>
+<td class="src"><pre><code class="objc">        manager = KingfisherManager(downloader: downloader, cache: cache)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">272</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">273</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">274</td>
+<td class="src"><pre><code class="objc">    /// Starts to download the resources and cache them. This can be useful for background downloading</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">275</td>
+<td class="src"><pre><code class="objc">    /// of assets that are required for later use in an app. This code will not try and update any UI</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">276</td>
+<td class="src"><pre><code class="objc">    /// with the results of the process.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">277</td>
+<td class="src"><pre><code class="objc">    public func start() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">278</td>
+<td class="src"><pre><code class="objc">        pretchQueue.async {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">279</td>
+<td class="src"><pre><code class="objc">            guard !self.stopped else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">280</td>
+<td class="src"><pre><code class="objc">                assertionFailure("You can not restart the same prefetcher. Try to create a new prefetcher.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">281</td>
+<td class="src"><pre><code class="objc">                self.handleComplete()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">282</td>
+<td class="src"><pre><code class="objc">                return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">283</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">284</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">285</td>
+<td class="src"><pre><code class="objc">            guard self.maxConcurrentDownloads &gt; 0 else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">286</td>
+<td class="src"><pre><code class="objc">                assertionFailure("There should be concurrent downloads value should be at least 1.")</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">287</td>
+<td class="src"><pre><code class="objc">                self.handleComplete()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">288</td>
+<td class="src"><pre><code class="objc">                return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">289</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">290</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">291</td>
+<td class="src"><pre><code class="objc">            // Empty case.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">292</td>
+<td class="src"><pre><code class="objc">            guard self.prefetchSources.count &gt; 0 else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">293</td>
+<td class="src"><pre><code class="objc">                self.handleComplete()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">294</td>
+<td class="src"><pre><code class="objc">                return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">295</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">296</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">297</td>
+<td class="src"><pre><code class="objc">            let initialConcurrentDownloads = min(self.prefetchSources.count, self.maxConcurrentDownloads)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">298</td>
+<td class="src"><pre><code class="objc">            for _ in 0 ..&lt; initialConcurrentDownloads {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">299</td>
+<td class="src"><pre><code class="objc">                if let resource = self.pendingSources.popFirst() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">300</td>
+<td class="src"><pre><code class="objc">                    self.startPrefetching(resource)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">301</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">302</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">303</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">304</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">305</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">306</td>
+<td class="src"><pre><code class="objc">    /// Stops current downloading progress, and cancel any future prefetching activity that might be occuring.</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">307</td>
+<td class="src"><pre><code class="objc">    public func stop() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">308</td>
+<td class="src"><pre><code class="objc">        pretchQueue.async {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">309</td>
+<td class="src"><pre><code class="objc">            if self.finished { return }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">310</td>
+<td class="src"><pre><code class="objc">            self.stopped = true</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">311</td>
+<td class="src"><pre><code class="objc">            self.tasks.values.forEach { $0.cancel() }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">312</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">313</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">314</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">315</td>
+<td class="src"><pre><code class="objc">    private func downloadAndCache(_ source: Source) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">316</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">317</td>
+<td class="src"><pre><code class="objc">        let downloadTaskCompletionHandler: ((Result&lt;RetrieveImageResult, KingfisherError&gt;) -&gt; Void) = { result in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">318</td>
+<td class="src"><pre><code class="objc">            self.tasks.removeValue(forKey: source.cacheKey)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">319</td>
+<td class="src"><pre><code class="objc">            do {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">320</td>
+<td class="src"><pre><code class="objc">                let _ = try result.get()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">321</td>
+<td class="src"><pre><code class="objc">                self.completedSources.append(source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">322</td>
+<td class="src"><pre><code class="objc">            } catch {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">323</td>
+<td class="src"><pre><code class="objc">                self.failedSources.append(source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">324</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">325</td>
+<td class="src"><pre><code class="objc">            </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">326</td>
+<td class="src"><pre><code class="objc">            self.reportProgress()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">327</td>
+<td class="src"><pre><code class="objc">            if self.stopped {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">328</td>
+<td class="src"><pre><code class="objc">                if self.tasks.isEmpty {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">329</td>
+<td class="src"><pre><code class="objc">                    self.failedSources.append(contentsOf: self.pendingSources)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">330</td>
+<td class="src"><pre><code class="objc">                    self.handleComplete()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">331</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">332</td>
+<td class="src"><pre><code class="objc">            } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">333</td>
+<td class="src"><pre><code class="objc">                self.reportCompletionOrStartNext()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">334</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">335</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">336</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">337</td>
+<td class="src"><pre><code class="objc">        var downloadTask: DownloadTask.WrappedTask?</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">338</td>
+<td class="src"><pre><code class="objc">        ImagePrefetcher.requestingQueue.sync {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">339</td>
+<td class="src"><pre><code class="objc">            let context = RetrievingContext(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">340</td>
+<td class="src"><pre><code class="objc">                options: optionsInfo, originalSource: source</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">341</td>
+<td class="src"><pre><code class="objc">            )</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">342</td>
+<td class="src"><pre><code class="objc">            downloadTask = manager.loadAndCacheImage(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">343</td>
+<td class="src"><pre><code class="objc">                source: source,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">344</td>
+<td class="src"><pre><code class="objc">                context: context,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">345</td>
+<td class="src"><pre><code class="objc">                completionHandler: downloadTaskCompletionHandler)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">346</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">347</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">348</td>
+<td class="src"><pre><code class="objc">        if let downloadTask = downloadTask {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">349</td>
+<td class="src"><pre><code class="objc">            tasks[source.cacheKey] = downloadTask</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">350</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">351</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">352</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">353</td>
+<td class="src"><pre><code class="objc">    private func append(cached source: Source) {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">354</td>
+<td class="src"><pre><code class="objc">        skippedSources.append(source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">355</td>
+<td class="src"><pre><code class="objc"> </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">356</td>
+<td class="src"><pre><code class="objc">        reportProgress()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">357</td>
+<td class="src"><pre><code class="objc">        reportCompletionOrStartNext()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">358</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">359</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">360</td>
+<td class="src"><pre><code class="objc">    private func startPrefetching(_ source: Source)</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">361</td>
+<td class="src"><pre><code class="objc">    {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">362</td>
+<td class="src"><pre><code class="objc">        if optionsInfo.forceRefresh {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">363</td>
+<td class="src"><pre><code class="objc">            downloadAndCache(source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">364</td>
+<td class="src"><pre><code class="objc">            return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">365</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">366</td>
+<td class="src"><pre><code class="objc">        </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">367</td>
+<td class="src"><pre><code class="objc">        let cacheType = manager.cache.imageCachedType(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">368</td>
+<td class="src"><pre><code class="objc">            forKey: source.cacheKey,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">369</td>
+<td class="src"><pre><code class="objc">            processorIdentifier: optionsInfo.processor.identifier)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">370</td>
+<td class="src"><pre><code class="objc">        switch cacheType {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">371</td>
+<td class="src"><pre><code class="objc">        case .memory:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">372</td>
+<td class="src"><pre><code class="objc">            append(cached: source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">373</td>
+<td class="src"><pre><code class="objc">        case .disk:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">374</td>
+<td class="src"><pre><code class="objc">            if optionsInfo.alsoPrefetchToMemory {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">375</td>
+<td class="src"><pre><code class="objc">                let context = RetrievingContext(options: optionsInfo, originalSource: source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">376</td>
+<td class="src"><pre><code class="objc">                _ = manager.retrieveImageFromCache(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">377</td>
+<td class="src"><pre><code class="objc">                    source: source,</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">378</td>
+<td class="src"><pre><code class="objc">                    context: context)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">379</td>
+<td class="src"><pre><code class="objc">                {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">380</td>
+<td class="src"><pre><code class="objc">                    _ in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">381</td>
+<td class="src"><pre><code class="objc">                    self.append(cached: source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">382</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">383</td>
+<td class="src"><pre><code class="objc">            } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">384</td>
+<td class="src"><pre><code class="objc">                append(cached: source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">385</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">386</td>
+<td class="src"><pre><code class="objc">        case .none:</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">387</td>
+<td class="src"><pre><code class="objc">            downloadAndCache(source)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">388</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">389</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">390</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">391</td>
+<td class="src"><pre><code class="objc">    private func reportProgress() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">392</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">393</td>
+<td class="src"><pre><code class="objc">        if progressBlock == nil &amp;&amp; progressSourceBlock == nil {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">394</td>
+<td class="src"><pre><code class="objc">            return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">395</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">396</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">397</td>
+<td class="src"><pre><code class="objc">        let skipped = self.skippedSources</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">398</td>
+<td class="src"><pre><code class="objc">        let failed = self.failedSources</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">399</td>
+<td class="src"><pre><code class="objc">        let completed = self.completedSources</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">400</td>
+<td class="src"><pre><code class="objc">        CallbackQueue.mainCurrentOrAsync.execute {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">401</td>
+<td class="src"><pre><code class="objc">            self.progressSourceBlock?(skipped, failed, completed)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">402</td>
+<td class="src"><pre><code class="objc">            self.progressBlock?(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">403</td>
+<td class="src"><pre><code class="objc">                skipped.compactMap { $0.asResource },</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">404</td>
+<td class="src"><pre><code class="objc">                failed.compactMap { $0.asResource },</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">405</td>
+<td class="src"><pre><code class="objc">                completed.compactMap { $0.asResource }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">406</td>
+<td class="src"><pre><code class="objc">            )</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">407</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">408</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">409</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">410</td>
+<td class="src"><pre><code class="objc">    private func reportCompletionOrStartNext() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">411</td>
+<td class="src"><pre><code class="objc">        if let resource = self.pendingSources.popFirst() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">412</td>
+<td class="src"><pre><code class="objc">            // Loose call stack for huge ammount of sources.</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">413</td>
+<td class="src"><pre><code class="objc">            pretchQueue.async { self.startPrefetching(resource) }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">414</td>
+<td class="src"><pre><code class="objc">        } else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">415</td>
+<td class="src"><pre><code class="objc">            guard allFinished else { return }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">416</td>
+<td class="src"><pre><code class="objc">            self.handleComplete()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">417</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">418</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">419</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">420</td>
+<td class="src"><pre><code class="objc">    var allFinished: Bool {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">421</td>
+<td class="src"><pre><code class="objc">        return skippedSources.count + failedSources.count + completedSources.count == prefetchSources.count</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">422</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">423</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">424</td>
+<td class="src"><pre><code class="objc">    private func handleComplete() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">425</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">426</td>
+<td class="src"><pre><code class="objc">        if completionHandler == nil &amp;&amp; completionSourceHandler == nil {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">427</td>
+<td class="src"><pre><code class="objc">            return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">428</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">429</td>
+<td class="src"><pre><code class="objc">        </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">430</td>
+<td class="src"><pre><code class="objc">        // The completion handler should be called on the main thread</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">431</td>
+<td class="src"><pre><code class="objc">        CallbackQueue.mainCurrentOrAsync.execute {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">432</td>
+<td class="src"><pre><code class="objc">            self.completionSourceHandler?(self.skippedSources, self.failedSources, self.completedSources)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">433</td>
+<td class="src"><pre><code class="objc">            self.completionHandler?(</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">434</td>
+<td class="src"><pre><code class="objc">                self.skippedSources.compactMap { $0.asResource },</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">435</td>
+<td class="src"><pre><code class="objc">                self.failedSources.compactMap { $0.asResource },</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">436</td>
+<td class="src"><pre><code class="objc">                self.completedSources.compactMap { $0.asResource }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">437</td>
+<td class="src"><pre><code class="objc">            )</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">438</td>
+<td class="src"><pre><code class="objc">            self.completionHandler = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">439</td>
+<td class="src"><pre><code class="objc">            self.progressBlock = nil</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">440</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">441</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">442</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+</table>
+</div></div>
+<footer><div class="row">
+<p><a href="https://github.com/SlatherOrg/slather">Fork me on Github</a></p>
+<p>&copy; 2022 Slather</p>
+</div></footer><script src="highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,
+            initial-scale=1.0,maximum-scale=1.0" />
+        <style type="text/css">
+            canvas {
+                border: 1px solid black;
+                width: 700px;
+                height: 700px;
+            }
+        </style>
+        <script type="text/javascript">
+        
+
+function TagCloud(w, h, context) {
+    "use strict";
+    this.ctx = context;
+    this.canvasWidth = w;
+    this.canvasHeight = h;
+    this.fontSize = this.canvasHeight / 3;
+    this.shape = "rectangle";
+}
+
+TagCloud.prototype.setShape = function () {
+    this.shape = "circle";
+};
+
+TagCloud.prototype.render = function (tags) {
+    this.ctx.textBaseline = "top";
+    tags.forEach(function (tag) {
+        this.placeTag(tag[0]);
+    }, this);
+};
+
+TagCloud.prototype.placeTag = function (tag) {
+    var placement;
+    while (!(placement = this._getNonOverlappingPlaceWithBestSize(
+            this.fontSize, tag)))
+        this.fontSize *= 0.9;
+
+    this.ctx.fillStyle = this._getRandomColor();
+    this.ctx.fillText(tag, placement.x, placement.y);
+};
+
+TagCloud.prototype._getNonOverlappingPlaceWithBestSize =
+    function (fontSize, tag) {
+    this.ctx.font = "" + fontSize + "pt " + "Arial";
+    var lineHeight=this.getLineHeight(fontSize);
+    var tagWidth = this.ctx.measureText(tag).width;
+
+    var base = new BasePlacement(
+        (this.canvasWidth - tagWidth) * Math.random(),
+        (this.canvasHeight - lineHeight) * Math.random(),
+        lineHeight
+        );
+
+    var placement;
+    /* jshint ignore:start */
+    while (placement = base.nextPlaceToTry()) {
+        if (this._isPlaceEmpty(placement, tagWidth, lineHeight))
+            break;
+    }
+    /* jshint ignore:end */
+    return placement;
+};
+
+TagCloud.prototype.getLineHeight = function (fontSize) {
+    return this.ctx.measureText('M').width * 1.2;
+}
+
+TagCloud.prototype._getRandomColor = function (){
+    var colors = ["aqua", "black", "blue", "fuchsia", "gray", "green",
+                  "lime", "maroon", "navy", "olive", "orange", "purple",
+                  "red", "silver", "teal"];
+    return colors[Math.floor(colors.length * Math.random())];
+};
+
+TagCloud.prototype._isPlaceEmpty = function (placement, width, height) {
+    if (placement.x < 0 || placement.y < 0 || placement.x + width >
+         this.canvasWidth || placement.y + height > this.canvasHeight)
+        return false;
+
+    var pix = this.ctx.getImageData(
+                placement.x, placement.y, width, height).data;
+
+    for (var i = 0, n = pix.length; i < n; i += 4)
+        if (pix[i+3])
+                return false;
+
+    return [[placement.x, placement.y],
+            [placement.x + width, placement.y],
+            [placement.x, placement.y + height],
+            [placement.x + width, placement.y + height]].every(
+                function(pos) {
+                    var a = this.canvasWidth / 2;
+                    var b = this.canvasHeight / 2;
+                    var X = pos[0] - a;
+                    var Y = pos[1] - b;
+                    return (X * X / a / a + Y * Y / b / b < 1);
+                }, this);
+};
+
+TagCloud.prototype.getCoverage = function () {
+    var pix = this.ctx.getImageData(
+                0, 0, this.canvasWidth, this.canvasHeight).data;
+    var pixCount = 0;
+    for (var i = 0, n = pix.length; i < n; i += 4) {
+        if (pix[i+3])
+            pixCount++;
+    }
+    return pixCount * 100 / this.canvasWidth / this.canvasHeight;
+};
+
+function BasePlacement(x, y, h) {
+    var baseX = x,
+        baseY = y,
+        scale = h,
+        tryNumber = 0;
+
+    this.nextPlaceToTry = function() {
+        if (tryNumber < this._spiralOffsets.length)
+            return {
+                x : baseX + this._spiralOffsets[tryNumber][0] * scale,
+                y : baseY + this._spiralOffsets[tryNumber++][1] * scale
+            };
+    };
+}
+
+function generateSpiralOffsets() {
+    var spiralOffsets = [];
+    var radius = 0;
+    var dr = 0.2;
+    for (var i = 0; radius < 40; i+=0.4, radius += dr) {
+        spiralOffsets.push([
+                   radius * Math.sin(i),
+                   radius * Math.cos(i)
+                ]);
+    }
+    return spiralOffsets;
+}
+
+BasePlacement.prototype._spiralOffsets = generateSpiralOffsets();
+
+    
+        </script>
+        <script type="application/javascript">
+            function draw() {
+                var canvas = document.getElementById("canvas");
+                    if (canvas.getContext) {
+                        var ctx = canvas.getContext("2d");
+                        // scale 2x
+                        if(window.devicePixelRatio == 2) {
+                            canvas.setAttribute('width', canvas.width * 2);
+                            canvas.setAttribute('height', canvas.height * 2);
+                        }
+                        var tagCloud = new TagCloud(canvas.width,
+                            canvas.height, ctx);
+                        tagCloud.render([                                        ["var", 45],
+                                        ["let", 33],
+                                        ["func", 28],
+                                        ["movie", 26],
+                                        ["viewModel", 23],
+                                        ["Int", 18],
+                                        ["id", 18],
+                                        ["request", 18],
+                                        ["Error", 17],
+                                        ["View", 17],
+                                        ["AnyPublisher", 14],
+                                        ["Movie", 14],
+                                        ["String", 13],
+                                        ["extension", 13],
+                                        ["MoviesResponse", 12],
+                                        ["some", 12],
+                                        ["Foundation", 11],
+                                        ["of", 11],
+                                        ["MovieDetail", 10],
+                                        ["init", 10],
+                                        ["movieDetailViewModel", 10],
+                                        ["1", 9],
+                                        ["page", 9],
+                                        ["string", 9],
+                                        ["title", 9],
+                                        ["URL", 8],
+                                        ["body", 8],
+                                        ["eraseToAnyPublisher", 8],
+                                        ["poster_path", 8],
+                                        ["promise", 8],
+                                        ["fetchMovieDetails", 7],
+                                        ["finished", 7],
+                                        ["interactor", 7],
+                                        ["loading", 7],
+                                        ["movieDetail", 7],
+                                        ["release_date", 7],
+                                        ["url", 7],
+                                        ["with", 7],
+                                        ["Combine", 6],
+                                        ["Interactor", 6],
+                                        ["MovieDetailBaseUseCase", 6],
+                                        ["Published", 6],
+                                        ["SwiftUI", 6],
+                                        ["Text", 6],
+                                        ["alignment", 6],
+                                        ["model", 6],
+                                        ["moviesAPI", 6],
+                                        ["2", 5],
+                                        ["MovieDetailViewModel", 5],
+                                        ["MovieListBaseUseCase", 5],
+                                        ["MoviesListAPI", 5],
+                                        ["MoviesListUseCase", 5],
+                                        ["MoviesListView", 5],
+                                        ["URLSession", 5],
+                                        ["bag", 5],
+                                        ["error", 5],
+                                        ["fetchMovieDetailsState", 5],
+                                        ["font", 5],
+                                        ["isShowing", 5],
+                                        ["mocked", 5],
+                                        ["moviesDetailUseCase", 5],
+                                        ["playingNowMoviesState", 5],
+                                        ["popularMoviesState", 5],
+                                        ["router", 5],
+                                        ["showDetailPage", 5],
+                                        ["ActivityIndicator", 4],
+                                        ["Bool", 4],
+                                        ["Future", 4],
+                                        ["MovieCellViewModel", 4],
+                                        ["MovieDetailView", 4],
+                                        ["MoviesDetailUseCase", 4],
+                                        ["MoviesListViewModel", 4],
+                                        ["PlayingNowViewModel", 4],
+                                        ["RequestState", 4],
+                                        ["UIActivityIndicatorView", 4],
+                                        ["URLRequest", 4],
+                                        ["VStack", 4],
+                                        ["build", 4],
+                                        ["completion", 4],
+                                        ["cornerRadius", 4],
+                                        ["enum", 4],
+                                        ["fetchAllMovies", 4],
+                                        ["fetchPlayingNowMovies", 4],
+                                        ["frame", 4],
+                                        ["get", 4],
+                                        ["isLoading", 4],
+                                        ["leading", 4],
+                                        ["main", 4],
+                                        ["moviesListUsecase", 4],
+                                        ["none", 4],
+                                        ["photo_URL", 4],
+                                        ["popularMoviesList", 4],
+                                        ["reponse", 4],
+                                        ["results", 4],
+                                        ["shared", 4],
+                                        ["style", 4],
+                                        ["true", 4],
+                                        ["$", 3],
+                                        ["16", 3],
+                                        ["8", 3],
+                                        ["Codable", 3],
+                                        ["Content", 3],
+                                        ["DispatchQueue", 3],
+                                        ["Genre", 3],
+                                        ["KFImage", 3],
+                                        ["Kingfisher", 3],
+                                        ["LoadingView", 3],
+                                        ["MovieDetailPage", 3],
+                                        ["MoviesRouter", 3],
+                                        ["T", 3],
+                                        ["aspectRatio", 3],
+                                        ["constant", 3],
+                                        ["contentMode", 3],
+                                        ["fit", 3],
+                                        ["foregroundColor", 3],
+                                        ["height", 3],
+                                        ["isAnimating", 3],
+                                        ["mostPopular", 3],
+                                        ["nowPlaying", 3],
+                                        ["on", 3],
+                                        ["playingNowMoviesList", 3],
+                                        ["receive", 3],
+                                        ["receiveValue", 3],
+                                        ["resizable", 3],
+                                        ["secondary", 3],
+                                        ["set", 3],
+                                        ["sink", 3],
+                                        ["store", 3],
+                                        ["success", 3],
+                                        ["type", 3],
+                                        ["uiView", 3],
+                                        ["vote_average", 3],
+                                        ["0", 2],
+                                        ["??", 2],
+                                        ["AnyCancellable", 2],
+                                        ["Binding", 2],
+                                        ["Color", 2],
+                                        ["Decodable", 2],
+                                        ["ErrorSome", 2],
+                                        ["MovieCell", 2],
+                                        ["MoviesDetailUseCaseErrorMock", 2],
+                                        ["MoviesDetailUseCaseMock", 2],
+                                        ["NavigationLink", 2],
+                                        ["ObservableObject", 2],
+                                        ["ObservedObject", 2],
+                                        ["PlayingNowCell", 2],
+                                        ["PreviewProvider", 2],
+                                        ["Section", 2],
+                                        ["Set", 2],
+                                        ["String?", 2],
+                                        ["UIViewRepresentableContext", 2],
+                                        ["ViewBuilder", 2],
+                                        ["_", 2],
+                                        ["addDefaultSettings", 2],
+                                        ["center", 2],
+                                        ["content", 2],
+                                        ["context", 2],
+                                        ["destination", 2],
+                                        ["failure", 2],
+                                        ["false", 2],
+                                        ["fetchPlayingNowMovieList", 2],
+                                        ["fetchPopularMovieList", 2],
+                                        ["final", 2],
+                                        ["genres", 2],
+                                        ["getUrl", 2],
+                                        ["headline", 2],
+                                        ["isActive", 2],
+                                        ["list", 2],
+                                        ["loadView", 2],
+                                        ["movieDetails", 2],
+                                        ["movieList", 2],
+                                        ["movieTitle", 2],
+                                        ["moviesListUseCase", 2],
+                                        ["name", 2],
+                                        ["onTapGesture", 2],
+                                        ["opacity", 2],
+                                        ["overview", 2],
+                                        ["padding", 2],
+                                        ["pageNumber", 2],
+                                        ["playingNow", 2],
+                                        ["playingNowList", 2],
+                                        ["popularMovies", 2],
+                                        ["previews", 2],
+                                        ["primary", 2],
+                                        ["protocol", 2],
+                                        ["releaseData", 2],
+                                        ["releaseDate", 2],
+                                        ["runtime", 2],
+                                        ["spacing", 2],
+                                        ["switch", 2],
+                                        ["testVar", 2],
+                                        ["total_pages", 2],
+                                        ["100", 1],
+                                        ["140", 1],
+                                        ["150", 1],
+                                        ["280", 1],
+                                        ["30", 1],
+                                        ["300", 1],
+                                        ["4", 1],
+                                        ["5", 1],
+                                        ["752623", 1],
+                                        ["APIError", 1],
+                                        ["App", 1],
+                                        ["Constants", 1],
+                                        ["Divider", 1],
+                                        ["Double", 1],
+                                        ["Equatable", 1],
+                                        ["ForEach", 1],
+                                        ["Group", 1],
+                                        ["HStack", 1],
+                                        ["HTTPError", 1],
+                                        ["Hashable", 1],
+                                        ["Identifiable", 1],
+                                        ["JSONDecoder", 1],
+                                        ["LazyHStack", 1],
+                                        ["List", 1],
+                                        ["LocalizedError", 1],
+                                        ["MovieDetail?", 1],
+                                        ["MovieDetailView_Previews", 1],
+                                        ["MovieList", 1],
+                                        ["MoviesApp", 1],
+                                        ["MoviesListUseCaseMock", 1],
+                                        ["MoviesListView_Previews", 1],
+                                        ["NavigationView", 1],
+                                        ["Never", 1],
+                                        ["PassthroughSubject", 1],
+                                        ["Scene", 1],
+                                        ["ScrollView", 1],
+                                        ["Spacer", 1],
+                                        ["State", 1],
+                                        ["Style", 1],
+                                        ["UIViewRepresentable", 1],
+                                        ["WindowGroup", 1],
+                                        ["_for", 1],
+                                        ["accentColor", 1],
+                                        ["allowsCellularAccess", 1],
+                                        ["as!", 1],
+                                        ["background", 1],
+                                        ["baseUrl", 1],
+                                        ["cachePolicy", 1],
+                                        ["clear", 1],
+                                        ["color", 1],
+                                        ["data", 1],
+                                        ["dataTaskPublisher", 1],
+                                        ["decode", 1],
+                                        ["decodeError", 1],
+                                        ["decoder", 1],
+                                        ["disabled", 1],
+                                        ["errorPage", 1],
+                                        ["horizontal", 1],
+                                        ["httpShouldHandleCookies", 1],
+                                        ["idealHeight", 1],
+                                        ["infinity", 1],
+                                        ["invalidRequest", 1],
+                                        ["large", 1],
+                                        ["listRowBackground", 1],
+                                        ["localizedDescription", 1],
+                                        ["makeUIView", 1],
+                                        ["map", 1],
+                                        ["maxWidth", 1],
+                                        ["message", 1],
+                                        ["mutating", 1],
+                                        ["navigationBarTitleDisplayMode", 1],
+                                        ["navigationTitle", 1],
+                                        ["onAppear", 1],
+                                        ["onReceive", 1],
+                                        ["overlay", 1],
+                                        ["passthrough", 1],
+                                        ["print", 1],
+                                        ["radius", 1],
+                                        ["returnCacheDataElseLoad", 1],
+                                        ["shadow", 1],
+                                        ["startAnimating", 1],
+                                        ["statusCode", 1],
+                                        ["stopAnimating", 1],
+                                        ["testError", 1],
+                                        ["timeoutInterval", 1],
+                                        ["title3", 1],
+                                        ["token", 1],
+                                        ["top", 1],
+                                        ["updateUIView", 1],
+                                        ["where", 1],
+                                        ["white", 1],
+                                        ["width", 1],
+                                        ["x", 1],
+                                        ["y", 1],
+
+                                    ]);
+                                }
+                        }
+                    </script>
+                </head>
+                <body onload="draw();">
+                    <canvas id="canvas" width="700" height="700"></canvas>
+                </body>
+            </html>

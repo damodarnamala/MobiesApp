@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B22EE5DD282569DF0018A7D3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22EE5DC282569DF0018A7D3 /* LoadingView.swift */; };
+		B23E8FE2283B77A000EE6A86 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B23E8FE1283B77A000EE6A86 /* Kingfisher */; };
+		B23E8FE5283B77C100EE6A86 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = B23E8FE4283B77C100EE6A86 /* Quick */; };
+		B23E8FE8283B77CD00EE6A86 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = B23E8FE7283B77CD00EE6A86 /* Nimble */; };
 		B26F3EC72825105E00E05E4D /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3EC62825105E00E05E4D /* MoviesApp.swift */; };
 		B26F3ECB2825106000E05E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26F3ECA2825106000E05E4D /* Assets.xcassets */; };
 		B26F3ECE2825106000E05E4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26F3ECD2825106000E05E4D /* Preview Assets.xcassets */; };
@@ -18,7 +21,6 @@
 		B26F3EF82825108A00E05E4D /* MoviesListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3EF42825108A00E05E4D /* MoviesListAPI.swift */; };
 		B26F3EFA282513F900E05E4D /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3EF9282513F900E05E4D /* MoviesListViewModel.swift */; };
 		B26F3EFD2825292A00E05E4D /* UrlSession+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3EFC2825292A00E05E4D /* UrlSession+extention.swift */; };
-		B26F3F0428254B1D00E05E4D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B26F3F0328254B1D00E05E4D /* Kingfisher */; };
 		B26F3F082825547900E05E4D /* PlayingNowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3F072825547900E05E4D /* PlayingNowCell.swift */; };
 		B26F3F0A2825548F00E05E4D /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3F092825548F00E05E4D /* MovieCell.swift */; };
 		B26F3F0C2825553100E05E4D /* MoviesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26F3F0B2825553100E05E4D /* MoviesListView.swift */; };
@@ -26,8 +28,6 @@
 		B2ECB847282912C500F4EF32 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECB846282912C500F4EF32 /* MovieDetailView.swift */; };
 		B2ECB84A28291CD000F4EF32 /* MovieDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECB84928291CD000F4EF32 /* MovieDetailUseCase.swift */; };
 		B2ECB84C2829265600F4EF32 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECB84B2829265600F4EF32 /* MovieDetailViewModel.swift */; };
-		B2ECB85928292CE100F4EF32 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = B2ECB85828292CE100F4EF32 /* Quick */; };
-		B2ECB85C28292CED00F4EF32 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = B2ECB85B28292CED00F4EF32 /* Nimble */; };
 		B2ECB85E2829350000F4EF32 /* MoviesDetailViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECB85D2829350000F4EF32 /* MoviesDetailViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26F3F0428254B1D00E05E4D /* Kingfisher in Frameworks */,
+				B23E8FE2283B77A000EE6A86 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2ECB85928292CE100F4EF32 /* Quick in Frameworks */,
-				B2ECB85C28292CED00F4EF32 /* Nimble in Frameworks */,
+				B23E8FE5283B77C100EE6A86 /* Quick in Frameworks */,
+				B23E8FE8283B77CD00EE6A86 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +244,7 @@
 			);
 			name = MoviesApp;
 			packageProductDependencies = (
-				B26F3F0328254B1D00E05E4D /* Kingfisher */,
+				B23E8FE1283B77A000EE6A86 /* Kingfisher */,
 			);
 			productName = MoviesApp;
 			productReference = B26F3EC32825105E00E05E4D /* MoviesApp.app */;
@@ -265,8 +265,8 @@
 			);
 			name = MoviesAppTests;
 			packageProductDependencies = (
-				B2ECB85828292CE100F4EF32 /* Quick */,
-				B2ECB85B28292CED00F4EF32 /* Nimble */,
+				B23E8FE4283B77C100EE6A86 /* Quick */,
+				B23E8FE7283B77CD00EE6A86 /* Nimble */,
 			);
 			productName = MoviesAppTests;
 			productReference = B26F3ED32825106000E05E4D /* MoviesAppTests.xctest */;
@@ -323,9 +323,9 @@
 			);
 			mainGroup = B26F3EBA2825105D00E05E4D;
 			packageReferences = (
-				B26F3F0228254B1D00E05E4D /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				B2ECB85728292CE100F4EF32 /* XCRemoteSwiftPackageReference "Quick" */,
-				B2ECB85A28292CED00F4EF32 /* XCRemoteSwiftPackageReference "Nimble" */,
+				B23E8FE0283B77A000EE6A86 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B23E8FE3283B77C100EE6A86 /* XCRemoteSwiftPackageReference "Quick" */,
+				B23E8FE6283B77CD00EE6A86 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = B26F3EC42825105E00E05E4D /* Products */;
 			projectDirPath = "";
@@ -709,15 +709,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B26F3F0228254B1D00E05E4D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B23E8FE0283B77A000EE6A86 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 7.0.0;
 			};
 		};
-		B2ECB85728292CE100F4EF32 /* XCRemoteSwiftPackageReference "Quick" */ = {
+		B23E8FE3283B77C100EE6A86 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
@@ -725,7 +725,7 @@
 				kind = branch;
 			};
 		};
-		B2ECB85A28292CED00F4EF32 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		B23E8FE6283B77CD00EE6A86 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
@@ -736,19 +736,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B26F3F0328254B1D00E05E4D /* Kingfisher */ = {
+		B23E8FE1283B77A000EE6A86 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B26F3F0228254B1D00E05E4D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = B23E8FE0283B77A000EE6A86 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		B2ECB85828292CE100F4EF32 /* Quick */ = {
+		B23E8FE4283B77C100EE6A86 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B2ECB85728292CE100F4EF32 /* XCRemoteSwiftPackageReference "Quick" */;
+			package = B23E8FE3283B77C100EE6A86 /* XCRemoteSwiftPackageReference "Quick" */;
 			productName = Quick;
 		};
-		B2ECB85B28292CED00F4EF32 /* Nimble */ = {
+		B23E8FE7283B77CD00EE6A86 /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B2ECB85A28292CED00F4EF32 /* XCRemoteSwiftPackageReference "Nimble" */;
+			package = B23E8FE6283B77CD00EE6A86 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
