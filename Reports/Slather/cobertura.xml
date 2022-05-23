@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.1987717195925704" branch-rate="0.1942264573991031" lines-covered="1327" lines-valid="6676" branches-covered="693" branches-valid="3568" complexity="0.0" timestamp="1653288403" version="Slather 2.7.2">
+<coverage line-rate="0.1987717195925704" branch-rate="0.1942264573991031" lines-covered="1327" lines-valid="6676" branches-covered="693" branches-valid="3568" complexity="0.0" timestamp="1653290886" version="Slather 2.7.2">
   <sources>
     <source>/Users/dnamala/Downloads/MoviesApp</source>
   </sources>

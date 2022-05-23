@@ -29,15 +29,14 @@ platform :ios do
     slather(
       proj: "MoviesApp.xcodeproj",
       scheme: "MoviesApp",
-      output_directory: "./Reports/Slather",
-      source_directory: "MoviesApp",
       cobertura_xml: true,
       arch: "x86_64",
-      html: true,
-      sonarqube_xml: true,
-      json: true,
-      show: true
-    )
+      output_directory: "Reports/Slather",
+      html: true, 
+      input_format:"profdata",
+      llvm_cov: true,
+      binary_basename:"MoviesApp"
+        )
   end
 end
 
