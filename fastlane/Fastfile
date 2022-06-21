@@ -25,34 +25,51 @@ platform :ios do
 	end
 		desc "Coverage xcov.."
 	lane :run_coverage do
-
-		# slather coverage --scheme MoviesApp --input-format profdata --output-directory ./Reports/Slather --show --html ./MoviesApp.xcodeproj   	slather(
-			proj: "MoviesApp.xcodeproj",
-			scheme: "MoviesApp",
-			cobertura_xml: true,
-			arch: "x86_64",
-			output_directory: "/Reports/Slather",
-			html: true,
-			coverage:true
+		swiftlint(
+			mode: :lint,                            # SwiftLint mode: :lint (default) or :autocorrect
+    		executable: "Pods/SwiftLint/swiftlint", # The SwiftLint binary path (optional). Important if you've installed it via CocoaPods
+    		output_file: "/Reports/SwiftLint/Report.html",   # The path of the output file (optional)
+    		reporter: "html",                       # The custom reporter to use (optional)
+    		config_file: ".swiftlint.yml",       # The path of the configuration file (optional)
+    		ignore_exit_status: true,               # Allow fastlane to continue even if SwiftLint returns a non-zero exit status (Default: false)
+    		quiet: true,                            # Don't print status logs like 'Linting ' & 'Done linting' (Default: false)
+    		strict: true                            # Fail on warnings? (Default: false)
 		)
+
+		# slather coverage --scheme MoviesApp --input-format profdata --output-directory ./Reports/Slather --show --html ./MoviesApp.xcodeproj   
+		
 	end
 
 	desc "Running swiftLint.."
 	lane :run_lint do
-		swiftlint(
-			mode: :lint,
-			# executable: "Pods/SwiftLint/swiftlint",
-			reporter: "html",
-			output_file: "Reports/Swiftlint/Result.html",
-			config_file: '.swiftlint.yml',
-			ignore_exit_status: true
-		)
+
+	swiftlint(
+  		mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+  		path: "MoviesApp",       # Specify path to lint (optional)
+  		output_file: "./Reports/SwiftLint/Report.html", # The path of the output file (optional)
+  		config_file: ".swiftlint.yml",     # The path of the configuration file (optional)
+  		files: [# List of files to process (optional)
+    		"AppDelegate.swift",
+    		"path/to/project/Model.swift"
+  		],
+		raise_if_swiftlint_error: true,      # Allow fastlane to raise an error if swiftlint fails
+  		ignore_exit_status: true    # Allow fastlane to continue even if SwiftLint returns a non-zero exit status
+
+)
+		# swiftlint(
+		# 	mode: :lint,
+		# 	reporter: "html",
+		# 	output_file: "Reports/Swiftlint/Report.html",
+		# 	config_file: ".swiftlint.yml",
+		# 	files:".swift"
+		# )
 	end
 
 	desc "Running lizard.."
-	lane :check_lizard do
+	lane :run_lizard do
 	# lizard -Eduplicate
 	# lizard -EWordCount
-	lizard(source_folder: 'MoviesApp', export_type: 'xml', report_file: 'Reports/Lizard/Reports.xml')
+	lizard(source_folder: "MoviesApp", export_type: "html", report_file: "./Reports/Lizard/Reports.html")
 	end
 end
+

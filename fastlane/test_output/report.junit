@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='MoviesAppTests.xctest' tests='13' failures='0'>
+  <testsuite name='MoviesAppTests.MovieDetailViewModelSpec' tests='4' failures='0'>
+    <testcase classname='MoviesAppTests.MovieDetailViewModelSpec' name='Testing_MovieDetailViewModel__When_MovieDetailViewModel_Created__It_should_have_isLoading____true' time='0.003'/>
+    <testcase classname='MoviesAppTests.MovieDetailViewModelSpec' name='Testing_MovieDetailViewModel__When_MovieDetailViewModel_Created__It_should_have_movieDetail_nil_' time='0.001'/>
+    <testcase classname='MoviesAppTests.MovieDetailViewModelSpec' name='Testing_MovieDetailViewModel__When_MovieDetailViewModel_Created__It_should_have_movieDetail_nil__2' time='0.001'/>
+    <testcase classname='MoviesAppTests.MovieDetailViewModelSpec' name='Testing_MovieDetailViewModel__When_MovieDetailViewModel_Created__It_should_have_gerne_nil_' time='0.001'/>
+  </testsuite>
+  <testsuite name='MoviesAppTests.MoviesListViewModelSpec' tests='9' failures='0'>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Created__It_should_have_isLoading____false' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Created__It_should_have_popularMoviesState_should_be__none' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Created__It_should_have_playingNowMoviesState_should_be__none' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Created__It_should_have_movies_shoud_be_empty' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Created__It_should_have_movies_shoud_be_empty_2' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Loading_movies__It_should_have_popularMoviesState_should_be__loading' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_MoviesListViewModel_Loading_movies__It_should_have_movies_shoud_not_be_empty' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_popularMoviesState_Loading_playin_now_movies__It_should_have_popularMoviesState_should_be__loading' time='0.001'/>
+    <testcase classname='MoviesAppTests.MoviesListViewModelSpec' name='Testing_ViewModel__When_popularMoviesState_Loading_playin_now_movies__It_should_have_movies_shoud_not_be_empty' time='0.001'/>
+  </testsuite>
+</testsuites>

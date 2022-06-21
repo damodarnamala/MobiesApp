@@ -1,0 +1,16 @@
+current directory: /Users/dnamala/Downloads/MoviesApp/vendor/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+/Users/dnamala/.rvm/rubies/ruby-3.1.0/bin/ruby -I /Users/dnamala/.rvm/rubies/ruby-3.1.0/lib/ruby/3.1.0 -r ./siteconf20220531-7252-d4q4k6.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/dnamala/Downloads/MoviesApp/vendor/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\= clean
+
+current directory: /Users/dnamala/Downloads/MoviesApp/vendor/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\=
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/dnamala/Downloads/MoviesApp/vendor/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20220531-7252-gawgk

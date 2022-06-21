@@ -47,10 +47,10 @@ Coverage xcov..
 
 Running swiftLint..
 
-### ios check_lizard
+### ios run_lizard
 
 ```sh
-[bundle exec] fastlane ios check_lizard
+[bundle exec] fastlane ios run_lizard
 ```
 
 Running lizard..

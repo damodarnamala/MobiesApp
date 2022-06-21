@@ -44,6 +44,17 @@ struct MovieDetailView: View {
                         .padding(8)
                 }
                 Spacer()
+                Button {
+                    let vm = ViewModel()
+                    vm.fetch()
+                } label: {
+                    Text("Fetch")
+                }
+                .frame(maxWidth: .infinity,alignment: .center)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.blue)
+                
             }
         }
     }
@@ -54,3 +65,29 @@ struct MovieDetailView_Previews: PreviewProvider {
         MovieDetailView(movieDetailViewModel: MovieDetailViewModel(movie: Movie.testVar))
     }
 }
+
+class ViewModel {
+    private var cancellable: AnyCancellable?
+    
+    func fetch() {
+        let url = URL(string: "https://reqres.in/api/users?page=2")!
+            URLSession
+            .shared
+            .dataTask(with: url, completionHandler: { data, reponse, error in
+                guard let data = data else {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                let response = String(data: data, encoding: .utf8)
+                print(response)
+            }).resume()
+        
+    }
+}
+struct Post: Decodable {
+    var userId: String
+    var title: String
+    
+}
+

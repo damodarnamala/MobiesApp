@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "MovieDetailView.swift" : </span><span>Lines: </span><span class="cov_low">20.59%</span><span> Branches: </span><span class="cov_low">33.33%</span>
+<span>Coverage for "MovieDetailView.swift" : </span><span>Lines: </span><span class="cov_low">11.67%</span><span> Branches: </span><span class="cov_low">16.67%</span>
 </h2>
-<h4 class="cov_subtitle">(7 of 34 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(7 of 60 relevant lines covered)</h4>
 <h4 class="cov_filepath">MoviesApp/MovieDetailView/MovieDetailView.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -244,52 +244,237 @@
 </tr>
 <tr class="missed">
 <td class="num">47</td>
-<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="src"><pre><code class="objc">                Button {</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">48</td>
-<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="src"><pre><code class="objc">                    let vm = ViewModel()</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">49</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="src"><pre><code class="objc">                    vm.fetch()</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">50</td>
-<td class="src"><pre><code class="objc">}</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">                } label: {</code></pre></td>
+<td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">51</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">                    Text("Fetch")</code></pre></td>
+<td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">52</td>
-<td class="src"><pre><code class="objc">struct MovieDetailView_Previews: PreviewProvider {</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">53</td>
-<td class="src"><pre><code class="objc">    static var previews: some View {</code></pre></td>
+<td class="src"><pre><code class="objc">                .frame(maxWidth: .infinity,alignment: .center)</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">54</td>
-<td class="src"><pre><code class="objc">        MovieDetailView(movieDetailViewModel: MovieDetailViewModel(movie: Movie.testVar))</code></pre></td>
+<td class="src"><pre><code class="objc">                .padding()</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">55</td>
+<td class="src"><pre><code class="objc">                .foregroundColor(.white)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">56</td>
+<td class="src"><pre><code class="objc">                .background(Color.blue)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">57</td>
+<td class="src"><pre><code class="objc">                </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">58</td>
+<td class="src"><pre><code class="objc">            }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">59</td>
+<td class="src"><pre><code class="objc">        }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">60</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="never">
-<td class="num">56</td>
+<td class="num">61</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">62</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">63</td>
+<td class="src"><pre><code class="objc">struct MovieDetailView_Previews: PreviewProvider {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">    static var previews: some View {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc">        MovieDetailView(movieDetailViewModel: MovieDetailViewModel(movie: Movie.testVar))</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc">class ViewModel {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc">    private var cancellable: AnyCancellable?</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">71</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">72</td>
+<td class="src"><pre><code class="objc">    func fetch() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">73</td>
+<td class="src"><pre><code class="objc">        let url = URL(string: "https://reqres.in/api/users?page=2")!</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">74</td>
+<td class="src"><pre><code class="objc">            URLSession</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">75</td>
+<td class="src"><pre><code class="objc">            .shared</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">76</td>
+<td class="src"><pre><code class="objc">            .dataTask(with: url, completionHandler: { data, reponse, error in</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">77</td>
+<td class="src"><pre><code class="objc">                guard let data = data else {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">78</td>
+<td class="src"><pre><code class="objc">                    print(error?.localizedDescription)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">79</td>
+<td class="src"><pre><code class="objc">                    return</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">80</td>
+<td class="src"><pre><code class="objc">                }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">81</td>
+<td class="src"><pre><code class="objc">                </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">82</td>
+<td class="src"><pre><code class="objc">                let response = String(data: data, encoding: .utf8)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">83</td>
+<td class="src"><pre><code class="objc">                print(response)</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">84</td>
+<td class="src"><pre><code class="objc">            }).resume()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">85</td>
+<td class="src"><pre><code class="objc">        </code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">86</td>
+<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">87</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">88</td>
+<td class="src"><pre><code class="objc">struct Post: Decodable {</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">89</td>
+<td class="src"><pre><code class="objc">    var userId: String</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">90</td>
+<td class="src"><pre><code class="objc">    var title: String</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">91</td>
+<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">92</td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">93</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 </table>

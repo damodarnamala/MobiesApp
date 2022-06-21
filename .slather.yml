@@ -1,0 +1,7 @@
+input_format: profdata
+coverage_service: cobertura_xml
+output_directory: slather-report
+scheme: MoviesApp
+xcodeproj: MoviesApp.xcodeproj
+ignore:
+    - ../**/*/Xcode*

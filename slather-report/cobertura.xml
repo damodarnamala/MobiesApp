@@ -1,0 +1,977 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.8417910447761194" branch-rate="0.8600000000000000" lines-covered="282" lines-valid="335" branches-covered="129" branches-valid="150" complexity="0.0" timestamp="1653478576" version="Slather 2.7.2">
+  <sources>
+    <source>/Users/dnamala/Downloads/MoviesApp</source>
+  </sources>
+  <packages>
+    <package name="MoviesApp.Helers" line-rate="1.0000000000000000" branch-rate="0.9090909090909091" complexity="0.0">
+      <classes>
+        <class name="LoadingView" filename="MoviesApp/Helers/LoadingView.swift" line-rate="1.0000000000000000" branch-rate="0.9000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="15" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="16" branch="false" hits="36"/>
+            <line number="17" branch="false" hits="36"/>
+            <line number="18" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="19" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="20" branch="false" hits="36"/>
+            <line number="21" branch="false" hits="36"/>
+            <line number="22" branch="false" hits="36"/>
+            <line number="23" branch="false" hits="36"/>
+            <line number="24" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="25" branch="false" hits="36"/>
+            <line number="26" branch="false" hits="36"/>
+            <line number="27" branch="false" hits="36"/>
+            <line number="28" branch="false" hits="36"/>
+            <line number="29" branch="false" hits="36"/>
+            <line number="30" branch="false" hits="36"/>
+            <line number="31" branch="false" hits="36"/>
+            <line number="32" branch="false" hits="36"/>
+            <line number="41" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="42" branch="false" hits="12"/>
+            <line number="43" branch="false" hits="12"/>
+            <line number="45" branch="true" hits="118" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="46" branch="true" hits="118" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="0" type="jump" coverage="75%"/>
+              </conditions>
+            </line>
+            <line number="47" branch="false" hits="118"/>
+          </lines>
+        </class>
+        <class name="UrlSession+extention" filename="MoviesApp/Helers/UrlSession+extention.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="20" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="21" branch="false" hits="229"/>
+            <line number="22" branch="false" hits="229"/>
+            <line number="23" branch="false" hits="229"/>
+            <line number="24" branch="false" hits="229"/>
+            <line number="25" branch="false" hits="229"/>
+            <line number="26" branch="false" hits="229"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp.MovieDetailView" line-rate="0.5072463768115942" branch-rate="0.6071428571428571" complexity="0.0">
+      <classes>
+        <class name="MovieDetailView" filename="MoviesApp/MovieDetailView/MovieDetailView.swift" line-rate="0.2058823529411765" branch-rate="0.3333333333333333" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="13" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="14" branch="false" hits="205"/>
+            <line number="15" branch="false" hits="205"/>
+            <line number="20" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="22" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="23" branch="false" hits="205"/>
+            <line number="24" branch="false" hits="205"/>
+            <line number="26" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="27" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="28" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="29" branch="false" hits="0"/>
+            <line number="30" branch="false" hits="0"/>
+            <line number="31" branch="false" hits="0"/>
+            <line number="32" branch="false" hits="0"/>
+            <line number="33" branch="false" hits="0"/>
+            <line number="34" branch="false" hits="0"/>
+            <line number="35" branch="false" hits="0"/>
+            <line number="36" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="37" branch="false" hits="0"/>
+            <line number="38" branch="false" hits="0"/>
+            <line number="39" branch="false" hits="0"/>
+            <line number="40" branch="false" hits="0"/>
+            <line number="41" branch="false" hits="0"/>
+            <line number="42" branch="false" hits="0"/>
+            <line number="43" branch="false" hits="0"/>
+            <line number="44" branch="false" hits="0"/>
+            <line number="45" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="46" branch="false" hits="0"/>
+            <line number="47" branch="false" hits="0"/>
+            <line number="48" branch="false" hits="0"/>
+            <line number="49" branch="false" hits="0"/>
+            <line number="53" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="54" branch="false" hits="0"/>
+            <line number="55" branch="false" hits="0"/>
+          </lines>
+        </class>
+        <class name="MovieDetailViewModel" filename="MoviesApp/MovieDetailView/MovieDetailViewModel.swift" line-rate="0.8000000000000000" branch-rate="0.7368421052631579" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="14" branch="true" hits="206" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="16" branch="true" hits="206" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="19" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="23" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="24" branch="false" hits="0"/>
+            <line number="25" branch="false" hits="0"/>
+            <line number="27" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="28" branch="false" hits="1"/>
+            <line number="29" branch="false" hits="1"/>
+            <line number="31" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="32" branch="true" hits="0" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="33" branch="false" hits="0"/>
+            <line number="35" branch="true" hits="206" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="36" branch="false" hits="206"/>
+            <line number="37" branch="false" hits="206"/>
+            <line number="38" branch="false" hits="206"/>
+            <line number="39" branch="false" hits="206"/>
+            <line number="41" branch="true" hits="206" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="42" branch="false" hits="206"/>
+            <line number="43" branch="false" hits="206"/>
+            <line number="44" branch="false" hits="206"/>
+            <line number="45" branch="true" hits="206" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="46" branch="false" hits="192"/>
+            <line number="47" branch="true" hits="192" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="48" branch="true" hits="192" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="49" branch="true" hits="192" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="50" branch="true" hits="0" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="51" branch="true" hits="192" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="52" branch="true" hits="192" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="53" branch="false" hits="192"/>
+            <line number="54" branch="true" hits="192" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="55" branch="false" hits="206"/>
+            <line number="56" branch="false" hits="206"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp.MovieDetailView.Usecase" line-rate="0.7619047619047619" branch-rate="0.6666666666666666" complexity="0.0">
+      <classes>
+        <class name="MovieDetailUseCase" filename="MoviesApp/MovieDetailView/Usecase/MovieDetailUseCase.swift" line-rate="0.7619047619047619" branch-rate="0.6666666666666666" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="18" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="19" branch="false" hits="205"/>
+            <line number="20" branch="false" hits="205"/>
+            <line number="29" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="30" branch="false" hits="205"/>
+            <line number="31" branch="false" hits="205"/>
+            <line number="32" branch="false" hits="205"/>
+            <line number="33" branch="false" hits="205"/>
+            <line number="39" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="40" branch="false" hits="205"/>
+            <line number="41" branch="false" hits="205"/>
+            <line number="47" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="48" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="49" branch="false" hits="1"/>
+            <line number="50" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="51" branch="false" hits="1"/>
+            <line number="58" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="59" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="60" branch="false" hits="0"/>
+            <line number="61" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="62" branch="false" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp.MovieListView.Cells" line-rate="1.0000000000000000" branch-rate="0.9230769230769231" complexity="0.0">
+      <classes>
+        <class name="MovieCell" filename="MoviesApp/MovieListView/Cells/MovieCell.swift" line-rate="1.0000000000000000" branch-rate="0.9000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="14" branch="true" hits="109" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="15" branch="false" hits="109"/>
+            <line number="16" branch="false" hits="109"/>
+            <line number="17" branch="true" hits="81" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="18" branch="true" hits="81" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="19" branch="false" hits="81"/>
+            <line number="20" branch="false" hits="81"/>
+            <line number="21" branch="false" hits="81"/>
+            <line number="22" branch="false" hits="81"/>
+            <line number="23" branch="false" hits="81"/>
+            <line number="24" branch="true" hits="81" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="25" branch="false" hits="81"/>
+            <line number="26" branch="false" hits="81"/>
+            <line number="27" branch="false" hits="81"/>
+            <line number="28" branch="false" hits="81"/>
+            <line number="29" branch="false" hits="81"/>
+            <line number="30" branch="true" hits="81" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="31" branch="false" hits="81"/>
+            <line number="32" branch="false" hits="81"/>
+            <line number="33" branch="false" hits="81"/>
+            <line number="39" branch="true" hits="81" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="40" branch="true" hits="81" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="41" branch="false" hits="81"/>
+            <line number="42" branch="false" hits="81"/>
+            <line number="43" branch="true" hits="81" condition-coverage="66% (2/3)">
+              <conditions>
+                <condition number="0" type="jump" coverage="66%"/>
+              </conditions>
+            </line>
+          </lines>
+        </class>
+        <class name="PlayingNowCell" filename="MoviesApp/MovieListView/Cells/PlayingNowCell.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="14" branch="true" hits="96" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="15" branch="false" hits="96"/>
+            <line number="16" branch="false" hits="96"/>
+            <line number="17" branch="true" hits="96" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="18" branch="false" hits="96"/>
+            <line number="19" branch="false" hits="96"/>
+            <line number="20" branch="false" hits="96"/>
+            <line number="21" branch="false" hits="96"/>
+            <line number="22" branch="false" hits="96"/>
+            <line number="27" branch="true" hits="96" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="28" branch="false" hits="96"/>
+            <line number="29" branch="false" hits="96"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp.MovieListView.Models" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="MovieListModel" filename="MoviesApp/MovieListView/Models/MovieListModel.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="19" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="42" branch="true" hits="1" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="43" branch="false" hits="1"/>
+            <line number="44" branch="false" hits="1"/>
+            <line number="45" branch="false" hits="1"/>
+            <line number="55" branch="true" hits="4" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="56" branch="false" hits="4"/>
+            <line number="57" branch="false" hits="4"/>
+            <line number="58" branch="false" hits="4"/>
+            <line number="59" branch="false" hits="4"/>
+            <line number="60" branch="false" hits="4"/>
+            <line number="61" branch="false" hits="4"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp.MovieListView" line-rate="0.8666666666666667" branch-rate="0.9180327868852459" complexity="0.0">
+      <classes>
+        <class name="MoviesListView" filename="MoviesApp/MovieListView/MoviesListView.swift" line-rate="0.8028169014084507" branch-rate="0.8809523809523809" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="12" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="13" branch="false" hits="0"/>
+            <line number="14" branch="false" hits="0"/>
+            <line number="21" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="22" branch="false" hits="12"/>
+            <line number="23" branch="false" hits="12"/>
+            <line number="25" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="26" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="27" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="28" branch="false" hits="36"/>
+            <line number="29" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="30" branch="false" hits="36"/>
+            <line number="31" branch="false" hits="36"/>
+            <line number="32" branch="false" hits="36"/>
+            <line number="33" branch="false" hits="36"/>
+            <line number="34" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="35" branch="false" hits="24"/>
+            <line number="36" branch="true" hits="24" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="37" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="38" branch="false" hits="12"/>
+            <line number="39" branch="false" hits="12"/>
+            <line number="40" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="41" branch="false" hits="36"/>
+            <line number="44" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="45" branch="true" hits="36" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="46" branch="true" hits="36" condition-coverage="100% (3/3)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="47" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="48" branch="false" hits="12"/>
+            <line number="49" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="50" branch="true" hits="72" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="51" branch="true" hits="72" condition-coverage="100% (3/3)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="52" branch="false" hits="12"/>
+            <line number="53" branch="true" hits="72" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="54" branch="true" hits="72" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="55" branch="false" hits="36"/>
+            <line number="58" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="59" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="60" branch="true" hits="109" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="61" branch="false" hits="109"/>
+            <line number="62" branch="true" hits="109" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="63" branch="false" hits="109"/>
+            <line number="64" branch="true" hits="109" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="65" branch="false" hits="0"/>
+            <line number="66" branch="true" hits="0" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="67" branch="false" hits="109"/>
+            <line number="68" branch="true" hits="109" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="69" branch="false" hits="12"/>
+            <line number="70" branch="false" hits="12"/>
+            <line number="72" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="73" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="74" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="75" branch="true" hits="96" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="76" branch="false" hits="96"/>
+            <line number="77" branch="true" hits="96" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="78" branch="false" hits="96"/>
+            <line number="79" branch="true" hits="96" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="80" branch="false" hits="0"/>
+            <line number="81" branch="true" hits="0" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="82" branch="false" hits="96"/>
+            <line number="83" branch="true" hits="96" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="84" branch="false" hits="12"/>
+            <line number="85" branch="false" hits="12"/>
+            <line number="86" branch="false" hits="12"/>
+            <line number="87" branch="false" hits="12"/>
+            <line number="89" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="90" branch="false" hits="0"/>
+            <line number="91" branch="false" hits="0"/>
+            <line number="92" branch="false" hits="0"/>
+            <line number="97" branch="true" hits="0" condition-coverage="0% (0/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="0%"/>
+              </conditions>
+            </line>
+            <line number="98" branch="false" hits="0"/>
+            <line number="99" branch="false" hits="0"/>
+          </lines>
+        </class>
+        <class name="MoviesListViewModel" filename="MoviesApp/MovieListView/MoviesListViewModel.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="13" branch="true" hits="15" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="14" branch="true" hits="15" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="15" branch="true" hits="15" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="16" branch="true" hits="15" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="17" branch="true" hits="15" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="19" branch="true" hits="37" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="20" branch="true" hits="37" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="21" branch="false" hits="37"/>
+            <line number="23" branch="true" hits="15" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="24" branch="false" hits="15"/>
+            <line number="25" branch="false" hits="15"/>
+            <line number="27" branch="true" hits="14" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="28" branch="false" hits="14"/>
+            <line number="29" branch="false" hits="14"/>
+            <line number="30" branch="false" hits="14"/>
+            <line number="31" branch="false" hits="14"/>
+            <line number="32" branch="true" hits="14" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="33" branch="true" hits="12" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="34" branch="false" hits="12"/>
+            <line number="35" branch="false" hits="12"/>
+            <line number="36" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="37" branch="false" hits="14"/>
+            <line number="39" branch="true" hits="14" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="40" branch="false" hits="14"/>
+            <line number="41" branch="false" hits="14"/>
+            <line number="42" branch="false" hits="14"/>
+            <line number="43" branch="false" hits="14"/>
+            <line number="44" branch="true" hits="14" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="45" branch="false" hits="12"/>
+            <line number="46" branch="true" hits="12" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="47" branch="false" hits="12"/>
+            <line number="48" branch="false" hits="12"/>
+            <line number="49" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="50" branch="false" hits="14"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp.MovieListView.Usecase" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="MoviesListAPI" filename="MoviesApp/MovieListView/Usecase/MoviesListAPI.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="26" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="27" branch="false" hits="229"/>
+            <line number="28" branch="false" hits="229"/>
+            <line number="29" branch="false" hits="229"/>
+            <line number="30" branch="false" hits="229"/>
+            <line number="35" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="36" branch="false" hits="229"/>
+            <line number="37" branch="false" hits="229"/>
+            <line number="38" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="39" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="40" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="41" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="42" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="43" branch="true" hits="205" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="44" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="45" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="46" branch="false" hits="229"/>
+            <line number="50" branch="true" hits="229" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="51" branch="false" hits="229"/>
+            <line number="52" branch="false" hits="229"/>
+            <line number="53" branch="false" hits="229"/>
+            <line number="54" branch="false" hits="229"/>
+            <line number="55" branch="false" hits="229"/>
+          </lines>
+        </class>
+        <class name="MoviesListUseCase" filename="MoviesApp/MovieListView/Usecase/MoviesListUseCase.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="18" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="19" branch="false" hits="12"/>
+            <line number="20" branch="false" hits="12"/>
+            <line number="29" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="30" branch="false" hits="12"/>
+            <line number="31" branch="false" hits="12"/>
+            <line number="38" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="39" branch="false" hits="12"/>
+            <line number="40" branch="false" hits="12"/>
+            <line number="48" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="49" branch="false" hits="12"/>
+            <line number="50" branch="false" hits="12"/>
+            <line number="51" branch="false" hits="12"/>
+            <line number="52" branch="false" hits="12"/>
+            <line number="53" branch="false" hits="12"/>
+            <line number="55" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="56" branch="false" hits="12"/>
+            <line number="57" branch="false" hits="12"/>
+            <line number="58" branch="false" hits="12"/>
+            <line number="59" branch="false" hits="12"/>
+            <line number="73" branch="true" hits="2" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="74" branch="true" hits="2" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="75" branch="false" hits="2"/>
+            <line number="76" branch="true" hits="2" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="77" branch="false" hits="2"/>
+            <line number="79" branch="true" hits="2" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="80" branch="true" hits="2" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="81" branch="false" hits="2"/>
+            <line number="82" branch="true" hits="2" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="83" branch="false" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MoviesApp" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="MoviesApp" filename="MoviesApp/MoviesApp.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="12" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="13" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="14" branch="false" hits="12"/>
+            <line number="15" branch="true" hits="12" condition-coverage="100% (1/1)">
+              <conditions>
+                <condition number="0" type="jump" coverage="100%"/>
+              </conditions>
+            </line>
+            <line number="16" branch="false" hits="12"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
